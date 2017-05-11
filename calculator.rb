@@ -21,18 +21,15 @@ print "Then pick if you want to add, subtract, multiply, or divide.\n"
 print "What is your first number?"
 num1 = gets.chomp.downcase
 
-
-alphabet = Array.new
-alphabet = ['a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alphabet = Array.new ['a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 while num1 == alphabet
 	print "Must be an integer. Try Again.\n"
-	num1 = gets
 end
 
 if 
 	num1 != alphabet
-	print "Your first number is #{num1} "
+	print "Your first number is #{num1}.\n"
 end
 
 
