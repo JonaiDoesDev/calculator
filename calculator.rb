@@ -18,23 +18,10 @@ end
 print "With THE CALCULATOR you can do simple arithmetic. You can add, subtract, multiply, or divide.\n"
 print "Pick two numbers. "
 print "Then pick if you want to add, subtract, multiply, or divide.\n"
-print "What is your first number?"
-num1 = gets.chomp.downcase
+print "What is your first number?\n"
+num1 = gets.chomp.to_i
 
-alphabet = Array.new ['a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-
-while num1 == alphabet
-	print "Must be an integer. Try Again.\n"
-end
-
-if 
-	num1 != alphabet
-	print "Your first number is #{num1}.\n"
-end
-
-
-
-print "what is your second number?"
+print "what is your second number?\n"
 num2 = gets.chomp.to_i
 
 print "Do you want to add, subtract, multiply, or divide?\n"
@@ -63,6 +50,11 @@ mult_func = "multiply"
 div_func = "divide"
 
 
+while (operator != 'add') and (operator != 'subtract') and (operator != 'multiply') and (operator != 'divide')
+	print "You must use \"add\", \"subtract\", \"multiply\", or \"divide\"!"
+	operator = gets.chomp.downcase
+end
+
 if operator == "add"
 	add_func(num1, num2)
 elsif operator == "subtract"
@@ -71,6 +63,4 @@ elsif operator == "multiply"
 	mult_func(num1, num2)
 elsif operator == "divide"
 	div_func(num1, num2)
-else 
-	print "Must use 'add', 'subtract', 'multiply', or 'divide'!"
 end
