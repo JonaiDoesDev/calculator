@@ -13,7 +13,7 @@ elsif answer == "no" then puts "goodbye"
 end
 
 
-puts "What is your first number?"
+puts "What is your first number??"
 num1 = gets.chomp.to_i
 
 print "what is your second number?\n"
