@@ -1,19 +1,25 @@
-print 'Hello, welcome to THE CALCULATOR! '
-print "Do you want to use it?\n"
+puts 'Hello, welcome to THE CALCULATOR! '
+puts "Do you want to use it?"
 answer = gets.chomp.downcase
 
-while (answer != 'yes') and (answer != 'no') 
-		print "You must type in \"yes\" or \"no\".\n"
+while answer != "yes"
+		puts "You must type yes or no"
 			answer = gets.chomp.downcase
+
+
+puts answer == "yes" ? "Lets play" : "Goodbye"
+exit
 end
 
-if 		answer == 'yes'
-			print "Awesome, lets start!\n"
 
-elsif 	answer == 'no'
-			print "Ok, goodbye.\n"
-			exit 
-end
+# if 		answer == 'yes'
+# 			print "Awesome, lets start!\n"
+
+# elsif 	answer == 'no'
+# 			print "Ok, goodbye.\n"
+# 			exit 
+# end
+
 
 print "With THE CALCULATOR you can do simple arithmetic. You can add, subtract, multiply, or divide.\n"
 print "Pick two numbers. "
