@@ -2,29 +2,18 @@ puts 'Hello, welcome to THE CALCULATOR! '
 puts "Do you want to use it?"
 answer = gets.chomp.downcase
 
-while answer != "yes"
-		puts "You must type yes or no"
-			answer = gets.chomp.downcase
+until ['yes', 'no', 'y', 'no'].include?(answer) 
+	puts "you must type yes or no"
+	answer = gets.chomp.downcase
+end
 
-
-puts answer == "yes" ? "Lets play" : "Goodbye"
-exit
+if answer == "yes" then puts "Lets play" 
+elsif answer == "no" then puts "goodbye"
+	exit
 end
 
 
-# if 		answer == 'yes'
-# 			print "Awesome, lets start!\n"
-
-# elsif 	answer == 'no'
-# 			print "Ok, goodbye.\n"
-# 			exit 
-# end
-
-
-print "With THE CALCULATOR you can do simple arithmetic. You can add, subtract, multiply, or divide.\n"
-print "Pick two numbers. "
-print "Then pick if you want to add, subtract, multiply, or divide.\n"
-print "What is your first number?\n"
+puts "What is your first number?"
 num1 = gets.chomp.to_i
 
 print "what is your second number?\n"
