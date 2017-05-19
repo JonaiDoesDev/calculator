@@ -16,6 +16,10 @@ end
 puts "What is your first number??"
 num1 = gets.chomp.to_i
 
+until [integer].include?(num1)
+	puts "you must type a number"
+end
+
 print "what is your second number?\n"
 num2 = gets.chomp.to_i
 
