@@ -12,15 +12,18 @@ elsif answer == "no" then puts "goodbye"
 	exit
 end
 
-
-puts "What is your first number??"
-num1 = gets.chomp.to_i
-
-until [integer].include?(num1)
-	puts "you must type a number"
+def no_number(num1)
+	num1 =~ /D/
+	puts "must type number" 
 end
 
-print "what is your second number?\n"
+puts "What is your first number?"
+num1 = gets.chomp.to_i
+no_number (num1)
+
+
+
+puts "what is your second number?"
 num2 = gets.chomp.to_i
 
 print "Do you want to add, subtract, multiply, or divide?\n"
